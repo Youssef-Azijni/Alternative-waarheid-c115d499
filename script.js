@@ -1,6 +1,15 @@
 // const frankrijkCapital = "Parijs";
 // const spinBeentjes = 8;
 // const bigLake = "het Ijsselmeer";
+
+const Array= [
+    "Parijs",
+    8,
+    "IJselmeer",
+    ["Volkswagen", "Audi", "Opel", "Porsche", "BMW", "Mercedes", "Mercedes-Benz"],
+    ["Texel", "Vlieland", "Terschelling", "Ameland", "Schiermonnikoog"],
+];
+
 var antwoorden = ["Parijs", 8, "het Ijsselmeer", 4320];
 var score = 0;
 
@@ -9,6 +18,8 @@ function script() {
     var lake = document.getElementById("lake").value;
     var spin = document.getElementById("spooder").value;
     var bombCode = document.getElementById("bombvest").value;
+    var automerk = document.getElementById("automerk").value;
+    var waddeneiland = document.getElementById("eiland").value;
 
     if (spin == antwoorden[1]) {
         score = score++;
@@ -22,6 +33,12 @@ function script() {
     }
 
     if (bombCode == antwoorden[3]) {
+        score = score++
+    }
+    if (Array[4].includes(automerk)) {
+        score = score++
+    }
+    if (Array[4].includes(waddeneiland)) {
         score = score++
     }
 }
